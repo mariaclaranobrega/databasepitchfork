@@ -59,9 +59,10 @@ pdf.corpo(f"\tEm anos anteriores, alguns destes artistas obtiveram pontuação a
 pdf.ln(5)
 
 for grupo in artistas_reviravolta:
-    pdf.multi_cell(180, 5, f'{str(grupo[0]).replace("[","").replace("]","")}\n{str(grupo[1]).replace("[","").replace("]","")}\n{str(grupo[2]).replace("[","").replace("]","")}',align='C')
+    pdf.multi_cell(180, 5,
+                   f'{str(grupo[0]).replace("[", "").replace("]", "")}\n{str(grupo[1]).replace("[", "").replace("]", "")}\n{str(grupo[2]).replace("[", "").replace("]", "")}',
+                   align='C')
     pdf.ln(8)
 
 pdf.output("primeiro_pdf.pdf")
-
 
